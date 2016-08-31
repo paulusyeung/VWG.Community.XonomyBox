@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{153B77BF-2178-48C1-8080-F89A21AC8A70}</ProjectGuid>
+    <ProjectTypeGuids>{80d85812-7475-4db8-9a61-dd0ef1ebd354};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VWG.Community.Forms</RootNamespace>
+    <AssemblyName>VWG.Community.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gizmox.WebGUI.Forms.Extended, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=85eae29607c9f5f3, processorArchitecture=MSIL" />
+    <Reference Include="Gizmox.WebGUI.Forms.Extended.Design, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=63e79e6cd5280864, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Gizmox.WebGUI.Forms, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=c508b41386c60f1d">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Forms.Themes, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=263fa4ef694acff6">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Common, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=263fa4ef694acff6">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Client, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=0fb8f99bd6cd7e23">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Forms.Design, Version=4.0.5701.0, Culture=neutral, PublicKeyToken=dd2a1fd4d120c769">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XonomyBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XonomyBox.designer.cs">
+      <DependentUpon>XonomyBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XonomyBoxSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XonomyBox.bmp" />
+    <Content Include="XonomyBoxSkin.draghandle.gif">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+    <Content Include="XonomyBoxSkin.exclamation.png">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+    <Content Include="XonomyBoxSkin.minus.gif">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+    <Content Include="XonomyBoxSkin.plus.gif">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+    <Content Include="XonomyBoxSkin.xonomy.css">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+    <Content Include="XonomyBoxSkin.xonomy.js">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+    <Content Include="XonomyBoxSkin.XonomyBox.html">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+    <Content Include="XonomyBoxSkin.XonomyBox.js">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XonomyBoxSkin.resx">
+      <DependentUpon>XonomyBoxSkin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Condition="" Project="$(MSBuildExtensionsPath)\Gizmox\v10.0\Gizmox.VWGLibrary.targets" />
+</Project>
